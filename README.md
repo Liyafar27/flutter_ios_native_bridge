@@ -1,14 +1,28 @@
-# flutter_ios_native_bridge
+# iOS Native Bridge
 
-📱 iOS Native Bridge (Flutter + Swift + C++)
-A minimal iOS demo app built with Flutter that demonstrates seamless interop between Dart, Swift, and C++ via MethodChannel.
+A minimal Flutter demo showcasing **native interoperability on iOS** using **Swift** and **C++**.
 
-Workflow on button tap:
+## 🎯 Technical Task Implementation
 
-Increment counter N in Dart
-Call native Swift code via MethodChannel
-Swift invokes a C++ library
-C++ writes "hello world N" to a text file
-File content is read and returned to Flutter UI
-✅ Full implementation of the technical task:
-Flutter → Swift → C++ → File I/O → Flutter
+On button press:
+1. **Dart**: Increment counter `N`
+2. **Dart → Swift**: Invoke native code via `MethodChannel`
+3. **Swift → C++**: Call a minimal C++ library
+4. **C++**: Write `"hello world N"` to a text file (`/tmp/hello.txt`)
+5. **C++**: Read the file and return its content
+6. **Swift → Dart**: Send result back through the channel
+7. **Dart**: Display file content in UI
+
+✅ All requirements fulfilled:
+> *"Flutter → Swift → C++ → File I/O → Flutter"*
+
+## 🛠️ Tech Stack
+- **Flutter** (Dart) — UI & app logic
+- **Swift** — iOS native bridge
+- **C++** — file I/O via standard library (`std::ofstream`, `std::ifstream`)
+- **MethodChannel** — communication layer
+
+## ▶️ How to Run
+```bash
+flutter pub get
+flutter run

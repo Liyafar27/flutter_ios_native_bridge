@@ -16,7 +16,6 @@ import UIKit
          let args = call.arguments as? [String: Any],
          let n = args["n"] as? Int {
 
-        // 👇 ЭТА СТРОКА ОБЯЗАТЕЛЬНА — вызов C++
         let cString = writeHelloAndReturnContent(Int32(n))
         let content = String(cString: cString!)
         result(content)
