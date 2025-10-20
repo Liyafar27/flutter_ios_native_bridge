@@ -16,7 +16,8 @@ import UIKit
          let args = call.arguments as? [String: Any],
          let n = args["n"] as? Int {
 
-        let cString = writeHelloAndReturnContent(Int32(n))
+        let tempDir = NSTemporaryDirectory()
+        let cString = writeHelloAndReturnContent(Int32(n), tempDir)
         let content = String(cString: cString!)
         result(content)
       } else {

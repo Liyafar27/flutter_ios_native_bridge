@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-const char* writeHelloAndReturnContent(int n);
+const char* writeHelloAndReturnContent(int n, const char* basePath);
 
 #ifdef __cplusplus
 }
